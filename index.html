@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Impact of Access Levels on Operational Workflow | PYLER</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary: #0052FF;
+            --dark: #0F172A;
+            --accent: #F1F5F9;
+            --success: #10B981;
+            --warning: #F59E0B;
+            --text-muted: #64748B;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            color: var(--dark);
+            background-color: #FFFFFF;
+            margin: 0;
+            line-height: 1.6;
+        }
+
+        header {
+            background: var(--dark);
+            color: white;
+            padding: 80px 20px;
+            text-align: center;
+        }
+
+        .container {
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 40px 20px;
+        }
+
+        h1 {
+            font-size: 2.8rem;
+            margin: 0;
+            font-weight: 800;
+            letter-spacing: -1px;
+        }
+
+        .subtitle {
+            font-size: 1.2rem;
+            opacity: 0.8;
+            margin-top: 15px;
+            max-width: 700px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .section {
+            margin-bottom: 60px;
+            padding: 40px;
+            border-radius: 24px;
+            background: var(--accent);
+        }
+
+        .section-header {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            margin-bottom: 30px;
+        }
+
+        .badge {
+            background: var(--primary);
+            color: white;
+            padding: 6px 16px;
+            border-radius: 50px;
+            font-weight: bold;
+            font-size: 0.85rem;
+        }
+
+        .grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 24px;
+        }
+
+        .card {
+            background: white;
+            padding: 30px;
+            border-radius: 16px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.03);
+            display: flex;
+            flex-direction: column;
+        }
+
+        .card h3 {
+            margin-top: 0;
+            font-size: 1.1rem;
+            color: var(--primary);
+            border-bottom: 1px solid var(--accent);
+            padding-bottom: 15px;
+            margin-bottom: 20px;
+        }
+
+        ul {
+            padding-left: 18px;
+            margin: 0;
+        }
+
+        li {
+            margin-bottom: 12px;
+            font-size: 0.95rem;
+        }
+
+        .recommended {
+            border: 2px solid var(--primary);
+            position: relative;
+        }
+
+        .recommended::after {
+            content: "RECOMMENDED SETUP";
+            position: absolute;
+            top: -12px;
+            right: 24px;
+            background: var(--primary);
+            color: white;
+            font-size: 0.65rem;
+            font-weight: 800;
+            padding: 3px 12px;
+            border-radius: 4px;
+        }
+
+        .alert-box {
+            background: #FFFBEB;
+            border-left: 5px solid var(--warning);
+            padding: 25px;
+            margin-top: 40px;
+            border-radius: 12px;
+            font-size: 0.95rem;
+        }
+
+        .footer {
+            background: #F8FAFC;
+            padding: 80px 20px;
+            text-align: center;
+            border-top: 1px solid #E2E8F0;
+        }
+
+        @media (max-width: 850px) {
+            .grid {
+                grid-template-columns: 1fr;
+            }
+
+            h1 {
+                font-size: 2.2rem;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <div class="container">
+            <h1>Impact of Access Levels on Operational Workflow</h1>
+            <p class="subtitle">A comparative overview of DV360 Write-Enabled vs. Read-Only configurations for PYLER
+                solutions.</p>
+        </div>
+    </header>
+
+    <div class="container">
+
+        <div class="section">
+            <div class="section-header">
+                <span class="badge">01</span>
+                <h2>AiD (Brand Safety Solution)</h2>
+            </div>
+            <div class="grid">
+                <div class="card recommended">
+                    <h3>Standard Case (Write-Enabled)</h3>
+                    <ul>
+                        <li>AiD analyzes all placements across active YouTube campaigns in real-time.</li>
+                        <li><strong>Automated Exclusions:</strong> Automatically applies blocks for unsafe inventory to
+                            prevent further spend.</li>
+                        <li>Enables continuous, real-time protection without manual overhead.</li>
+                    </ul>
+                </div>
+                <div class="card">
+                    <h3>Read-Only Case</h3>
+                    <ul>
+                        <li>Continuous sync of campaign and placement data for dashboard visualization.</li>
+                        <li><strong>Manual Workflow:</strong> Sensitive placements must be downloaded via CSV.</li>
+                        <li>Exclusions must be manually applied within the DV360 platform.</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="section">
+            <div class="section-header">
+                <span class="badge">02</span>
+                <h2>AiD – Custom Filtering (Brand Sensitivity)</h2>
+            </div>
+            <div class="grid">
+                <div class="card recommended">
+                    <h3>Standard Case (Write-Enabled)</h3>
+                    <ul>
+                        <li>Define and proactively block specific content types (e.g., negative brand mentions).</li>
+                        <li>Identified placements are <strong>automatically connected</strong> to campaigns and blocked
+                            preemptively.</li>
+                    </ul>
+                </div>
+                <div class="card">
+                    <h3>Read-Only Case</h3>
+                    <ul>
+                        <li>Identified content is surfaced in the dashboard for monitoring.</li>
+                        <li>Data can be exported for manual exclusion but lacks automated connectivity.</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="section">
+            <div class="section-header">
+                <span class="badge">03</span>
+                <h2>AiM (Contextual Targeting Solution)</h2>
+            </div>
+            <div class="grid">
+                <div class="card recommended">
+                    <h3>Standard Case (Write-Enabled)</h3>
+                    <ul>
+                        <li>Pyler directly operates targeting on your behalf.</li>
+                        <li>Target contexts (events, themes) are defined upfront, and inventory is actively managed.
+                        </li>
+                        <li>Ensures ads are delivered on the most relevant inventory to <strong>drive stronger
+                                SOV</strong>.</li>
+                    </ul>
+                </div>
+                <div class="card">
+                    <h3>Read-Only Case</h3>
+                    <ul>
+                        <li>Pyler provides curated lists of high-relevance inventory based on defined contexts.</li>
+                        <li><strong>Operational Limitation:</strong> As execution is manual on the client side, we
+                            cannot guarantee delivery pacing or full budget utilization.</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="alert-box">
+            <strong>Strategic Recommendation:</strong> Write-enabled access provides the most end-to-end and automated
+            experience, which is essential for leveraging Peak-Intelligence. In read-only setups, maintaining near
+            real-time control over unsuitable placements is operationally challenging.
+        </div>
+
+    </div>
+
+    <div class="footer">
+        <div class="container">
+            <h3>Next Steps</h3>
+            <p>Would you like to discuss the specific expectations and roles for the upcoming tests?</p>
+            <p style="font-weight: bold; color: var(--primary); margin-top: 20px;">PYLER Intelligence Team</p>
+        </div>
+    </div>
+
+</body>
+
+</html>
